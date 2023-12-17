@@ -1,0 +1,22 @@
+snowflake_profile:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: url
+      warehouse: DW-name
+      role: role
+      database: database
+      schema: schema
+
+redshift_profile:
+  target: dev
+  outputs:
+    dev:
+      type: redshift
+      host: redshift host
+      user: redshift-user
+      password: redshift-password
+      database: redshift-database
+      schema: redshift schema
+      port: 5143

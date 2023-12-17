@@ -1,0 +1,45 @@
+[0m09:16:03.586281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c06f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bef52b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10beed460>]}
+
+
+============================== 09:16:03.594160 | e3f5b4f2-3f84-4fb8-929e-04220415c2dd ==============================
+[0m09:16:03.594160 [info ] [MainThread]: Running with dbt=1.7.4
+[0m09:16:03.595256 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/tatendamakandigona/Desktop/Data Engineering Projects/ecomm/Streaming_Activities/logs', 'profiles_dir': '/Users/tatendamakandigona/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m09:16:04.306430 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e3f5b4f2-3f84-4fb8-929e-04220415c2dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096d6be0>]}
+[0m09:16:04.463409 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e3f5b4f2-3f84-4fb8-929e-04220415c2dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d0dba00>]}
+[0m09:16:04.465680 [info ] [MainThread]: Registered adapter: snowflake=1.7.1
+[0m09:16:04.496883 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m09:16:04.498335 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m09:16:04.499098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e3f5b4f2-3f84-4fb8-929e-04220415c2dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d1e1b50>]}
+[0m09:16:06.579316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e3f5b4f2-3f84-4fb8-929e-04220415c2dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d6690d0>]}
+[0m09:16:06.602867 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e3f5b4f2-3f84-4fb8-929e-04220415c2dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5f7160>]}
+[0m09:16:06.603831 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m09:16:06.604596 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e3f5b4f2-3f84-4fb8-929e-04220415c2dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5b1ac0>]}
+[0m09:16:06.607467 [info ] [MainThread]: 
+[0m09:16:06.608887 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m09:16:06.611028 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_streaming-analyics'
+[0m09:16:06.637542 [debug] [ThreadPool]: Using snowflake connection "list_streaming-analyics"
+[0m09:16:06.638371 [debug] [ThreadPool]: On list_streaming-analyics: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "Streaming_Activities", "target_name": "dev", "connection_name": "list_streaming-analyics"} */
+show terse schemas in database streaming-analyics
+    limit 10000
+[0m09:16:06.639116 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:18:06.840941 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "Streaming_Activities", "target_name": "dev", "connection_name": "list_streaming-analyics"} */
+show terse schemas in database streaming-analyics
+    limit 10000
+[0m09:18:06.842583 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m09:18:06.843577 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m09:18:06.844608 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m09:18:06.845398 [debug] [ThreadPool]: On list_streaming-analyics: No close available on handle
+[0m09:18:06.847419 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:18:06.848113 [debug] [MainThread]: Connection 'list_streaming-analyics' was properly closed.
+[0m09:18:06.848705 [info ] [MainThread]: 
+[0m09:18:06.849490 [info ] [MainThread]: Finished running  in 0 hours 2 minutes and 0.24 seconds (120.24s).
+[0m09:18:06.850434 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "streaming-analyics"
+  Database Error
+    250001: Could not connect to Snowflake backend after 1 attempt(s).Aborting
+[0m09:18:06.854384 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 123.37825, "process_user_time": 6.398009, "process_kernel_time": 0.555443, "process_mem_max_rss": "119037952", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m09:18:06.855965 [debug] [MainThread]: Command `dbt run` failed at 09:18:06.855645 after 123.38 seconds
+[0m09:18:06.856707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c06f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d1993a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d673b50>]}
+[0m09:18:06.857387 [debug] [MainThread]: Flushing usage events
+[0m09:18:11.869006 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
